@@ -1,6 +1,6 @@
 {
-  "name": "Ludo Game",
-  "short_name": "Ludo",
+  "name": "Ludo Multiplayer Game",
+  "short_name": "LudoGame",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

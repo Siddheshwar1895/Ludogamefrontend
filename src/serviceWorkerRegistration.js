@@ -1,21 +1,17 @@
-// src/serviceWorkerRegistration.js
 
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
   window.location.hostname === '[::1]' ||
   window.location.hostname.match(
-    /^127(?:\\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
+    /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
   )
 );
-
 export function register(config) {
   if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
     const publicUrl = new URL(process.env.PUBLIC_URL, window.location.href);
     if (publicUrl.origin !== window.location.origin) return;
-
     window.addEventListener('load', () => {
       const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
-
       if (isLocalhost) {
         checkValidServiceWorker(swUrl, config);
       } else {
@@ -24,7 +20,6 @@ export function register(config) {
     });
   }
 }
-
 function registerValidSW(swUrl, config) {
   navigator.serviceWorker
     .register(swUrl)
@@ -49,7 +44,6 @@ function registerValidSW(swUrl, config) {
       console.error('Error during service worker registration:', error);
     });
 }
-
 function checkValidServiceWorker(swUrl, config) {
   fetch(swUrl)
     .then(response => {
@@ -71,7 +65,6 @@ function checkValidServiceWorker(swUrl, config) {
       console.log('No internet connection found. App is running in offline mode.');
     });
 }
-
 export function unregister() {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.ready.then(registration => {
