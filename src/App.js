@@ -25,7 +25,7 @@ function App() {
 
   useEffect(() => {
     socket.on("diceRolled", ({ playerName, value }) => {
-      console.log(\`\${playerName} rolled a \${value}\`);
+      console.log(`${playerName} rolled a ${value}`);
     });
   }, []);
 
